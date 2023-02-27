@@ -7,8 +7,6 @@
 
 #import "SourceEditorCommand.h"
 #import "TranslaterDefine.h"
-
-#import <AFNetworking/AFNetworking.h>
 @implementation SourceEditorCommand
 
 - (void)performCommandWithInvocation:(XCSourceEditorCommandInvocation *)invocation completionHandler:(void (^)(NSError * _Nullable nilOrError))completionHandler

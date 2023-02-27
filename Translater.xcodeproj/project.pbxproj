@@ -14,6 +14,7 @@
 		D64C228429ABC6AB00D21DDD /* TranslaterExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D64C227629ABC6AB00D21DDD /* TranslaterExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D64C228929ABC6FC00D21DDD /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D64C224A29ABC37E00D21DDD /* XcodeKit.framework */; };
 		D64C228A29ABC6FC00D21DDD /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D64C224A29ABC37E00D21DDD /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D6F09FE929AD0EA400DC7981 /* YoudaoTranslater.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F09FE829AD0EA400DC7981 /* YoudaoTranslater.m */; };
 		D6FE0F0929AB65B9006098FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FE0F0829AB65B9006098FB /* AppDelegate.m */; };
 		D6FE0F0C29AB65B9006098FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FE0F0B29AB65B9006098FB /* ViewController.m */; };
 		D6FE0F0E29AB65B9006098FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6FE0F0D29AB65B9006098FB /* Assets.xcassets */; };
@@ -75,6 +76,8 @@
 		D64C228129ABC6AB00D21DDD /* TranslaterExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TranslaterExtension.entitlements; sourceTree = "<group>"; };
 		D64C228829ABC6EA00D21DDD /* TranslaterDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TranslaterDefine.h; sourceTree = "<group>"; };
 		D6A9045329ABC76D00E5D29F /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6F09FE729AD0EA400DC7981 /* YoudaoTranslater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YoudaoTranslater.h; sourceTree = "<group>"; };
+		D6F09FE829AD0EA400DC7981 /* YoudaoTranslater.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YoudaoTranslater.m; sourceTree = "<group>"; };
 		D6FE0F0429AB65B9006098FB /* Translater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6FE0F0729AB65B9006098FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6FE0F0829AB65B9006098FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -134,6 +137,7 @@
 		D64C227929ABC6AB00D21DDD /* TranslaterExtension */ = {
 			isa = PBXGroup;
 			children = (
+				D6F09FE629AD0E8100DC7981 /* YoudaoDict */,
 				D64C228829ABC6EA00D21DDD /* TranslaterDefine.h */,
 				D64C227A29ABC6AB00D21DDD /* SourceEditorExtension.h */,
 				D64C227B29ABC6AB00D21DDD /* SourceEditorExtension.m */,
@@ -143,6 +147,15 @@
 				D64C228129ABC6AB00D21DDD /* TranslaterExtension.entitlements */,
 			);
 			path = TranslaterExtension;
+			sourceTree = "<group>";
+		};
+		D6F09FE629AD0E8100DC7981 /* YoudaoDict */ = {
+			isa = PBXGroup;
+			children = (
+				D6F09FE729AD0EA400DC7981 /* YoudaoTranslater.h */,
+				D6F09FE829AD0EA400DC7981 /* YoudaoTranslater.m */,
+			);
+			path = YoudaoDict;
 			sourceTree = "<group>";
 		};
 		D6FE0EFB29AB65B9006098FB = {
@@ -331,6 +344,7 @@
 			files = (
 				D64C227C29ABC6AB00D21DDD /* SourceEditorExtension.m in Sources */,
 				D64C227F29ABC6AB00D21DDD /* SourceEditorCommand.m in Sources */,
+				D6F09FE929AD0EA400DC7981 /* YoudaoTranslater.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
