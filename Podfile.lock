@@ -12,17 +12,21 @@ PODS:
   - AFNetworking/Reachability (4.0.1)
   - AFNetworking/Security (4.0.1)
   - AFNetworking/Serialization (4.0.1)
+  - JSONModel (1.8.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 4.0)
+  - JSONModel
 
 SPEC REPOS:
   trunk:
     - AFNetworking
+    - JSONModel
 
 SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
+  JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
 
-PODFILE CHECKSUM: 9c23eb83cbd7289f9f7a350a270f3b76687deea5
+PODFILE CHECKSUM: f0b1c281ce307979416e919f0c5fc4690ca908a6
 
 COCOAPODS: 1.11.3

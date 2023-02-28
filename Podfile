@@ -15,4 +15,5 @@ target 'TranslaterExtension' do
 
   # Pods for TranslaterExtension
   pod 'AFNetworking', '~> 4.0'
+  pod 'JSONModel'
 end

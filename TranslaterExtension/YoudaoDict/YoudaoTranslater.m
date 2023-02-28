@@ -12,6 +12,28 @@
 static NSString *v = @"webdict";
 static NSString *w = @"Mk6hqtUp33DGGtoS63tTJbMUYjRrG1Lu";
 static NSString *_ = @"web";
+
+
+@implementation YoudaoSentenceTransModel
+@end
+
+@implementation YoudaoWordModel
+@end
+
+@implementation YoudaoWordTransModel
+@end
+
+@implementation YouDaoResponse
++ (JSONKeyMapper *)keyMapper {
+    return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{
+        @"word":@"ec.word"
+    }];
+}
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    return YES;
+}
+@end
+
 /**
  from youdao web site
  c698e2f.js
@@ -20,11 +42,15 @@ static NSString *_ = @"web";
 
 #define CC_MD5_DIGEST_LENGTH 16
 
+/// MD5加密
 NSString *getMd5WithString(NSString * string)
 {
     const char* original_str=[string UTF8String];
-    unsigned char digist[CC_MD5_DIGEST_LENGTH]; //CC_MD5_DIGEST_LENGTH = 16
+    unsigned char digist[CC_MD5_DIGEST_LENGTH];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
     CC_MD5(original_str, (uint)strlen(original_str), digist);
+#pragma clang diagnostic pop
     NSMutableString* outPutStr = [NSMutableString stringWithCapacity:10];
     for(int  i =0; i<CC_MD5_DIGEST_LENGTH;i++){
         [outPutStr appendFormat:@"%02x", digist[i]];//小写x表示输出的是小写MD5，大写X表示输出的是大写MD5
@@ -32,6 +58,7 @@ NSString *getMd5WithString(NSString * string)
     return [outPutStr lowercaseString];
 }
 
+/// 根据输入内容构建请求body
 + (NSDictionary *)buildFormDataWithContent:(NSString *)content {
     NSMutableString *timeStr = [[NSMutableString alloc] init];
     [timeStr appendString:content];
@@ -57,5 +84,10 @@ NSString *getMd5WithString(NSString * string)
         @"sign": f,
         @"keyfrom": v
     };
+}
+
++ (void)youdaoTranslateWithContent:(NSString *)content
+                        completion:(void (^)(YouDaoResponse * _Nullable, NSError * _Nullable))completion {
+    
 }
 @end
