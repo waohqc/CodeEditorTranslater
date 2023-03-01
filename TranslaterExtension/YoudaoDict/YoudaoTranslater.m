@@ -12,7 +12,7 @@
 static NSString *v = @"webdict";
 static NSString *w = @"Mk6hqtUp33DGGtoS63tTJbMUYjRrG1Lu";
 static NSString *_ = @"web";
-
+static NSString *youdaoTransUrl = @"https://dict.youdao.com/jsonapi_s?doctype=json&jsonversion=4";
 
 @implementation YoudaoSentenceTransModel
 @end
@@ -26,7 +26,8 @@ static NSString *_ = @"web";
 @implementation YouDaoResponse
 + (JSONKeyMapper *)keyMapper {
     return [[JSONKeyMapper alloc] initWithModelToJSONDictionary:@{
-        @"word":@"ec.word"
+        @"wordTransResult":@"ec.word",
+        @"sentenceTransResult":@"fanyi"
     }];
 }
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
@@ -88,6 +89,39 @@ NSString *getMd5WithString(NSString * string)
 
 + (void)youdaoTranslateWithContent:(NSString *)content
                         completion:(void (^)(YouDaoResponse * _Nullable, NSError * _Nullable))completion {
-    
+    NSDictionary *headers = @{
+      @"Accept": @"application/json, text/plain, */*",
+      @"Accept-Language": @"zh-CN,zh;q=0.9",
+      @"Connection": @"keep-alive",
+      @"Content-Type": @"application/x-www-form-urlencoded",
+      @"Cookie": @"OUTFOX_SEARCH_USER_ID_NCOO=636820395.5560622; OUTFOX_SEARCH_USER_ID=-347984630@115.171.244.182",
+      @"Origin": @"https://youdao.com",
+      @"Referer": @"https://youdao.com/",
+      @"Sec-Fetch-Dest": @"empty",
+      @"Sec-Fetch-Mode": @"cors",
+      @"Sec-Fetch-Site": @"same-site",
+      @"User-Agent": @"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36",
+      @"sec-ch-ua": @"\"Chromium\";v=\"110\", \"Not A(Brand\";v=\"24\", \"Google Chrome\";v=\"110\"",
+      @"sec-ch-ua-mobile": @"?0",
+      @"sec-ch-ua-platform": @"\"macOS\""
+    };
+    NSDictionary *params = [self.class buildFormDataWithContent:content];
+    [[AFHTTPSessionManager manager] POST:youdaoTransUrl
+                              parameters:params
+                                 headers:headers
+                                progress:nil
+                                 success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if ([responseObject isKindOfClass:NSDictionary.class]) {
+            YouDaoResponse *response = [[YouDaoResponse alloc] initWithDictionary:responseObject error:nil];
+            if (completion) completion(response, nil);
+        } else {
+            NSError *err = [[NSError alloc] initWithDomain:@"fun.waoh.translater"
+                                                      code:1
+                                                  userInfo:@{NSLocalizedFailureReasonErrorKey:@"解析错误"}];
+            if (completion) completion(nil, err);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (completion) completion(nil, error);
+    }];
 }
 @end

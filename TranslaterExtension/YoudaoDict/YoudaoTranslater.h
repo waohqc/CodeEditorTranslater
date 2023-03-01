@@ -40,10 +40,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface YouDaoResponse : JSONModel
 
 /// 句子翻译
-@property (nonatomic, strong) YoudaoSentenceTransModel *fanyi;
+@property (nonatomic, strong) YoudaoSentenceTransModel *sentenceTransResult;
 
 /// 单词翻译
-@property (nonatomic, strong) YoudaoWordTransModel *word;
+@property (nonatomic, strong) YoudaoWordTransModel *wordTransResult;
+
+/// 其它翻译
+//@property (nonatomic, strong) NSArray *web_trans;
 @end
 
 @interface YoudaoTranslater : NSObject
