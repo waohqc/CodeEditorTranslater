@@ -58,6 +58,9 @@ NS_ASSUME_NONNULL_BEGIN
 ///   - completion: 翻译结果
 + (void)youdaoTranslateWithContent:(NSString *)content
                         completion:(void(^)(YouDaoResponse *_Nullable, NSError *_Nullable))completion;
+
+/// 格式化单词翻译结果
++ (NSString *)formatWord:(YoudaoWordTransModel *)workTransModel;
 @end
 
 NS_ASSUME_NONNULL_END

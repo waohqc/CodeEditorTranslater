@@ -40,20 +40,19 @@
     if (selectedStrs.count == 1) {
         [YoudaoTranslater youdaoTranslateWithContent:selectedStrs[0]
                                           completion:^(YouDaoResponse * _Nullable transResponse, NSError * _Nullable err) {
-            if (transResponse) {
-                XTLog(@"%@",transResponse);
+            if (transResponse && !err) {
                 [self fillTransResultInLines:invocation.buffer.lines
                                      content:selectedStrs[0]
                                   selections:invocation.buffer.selections
                                  transResult:transResponse];
-            } else if (err) {
-                XTLog(@"翻译失败:%@",err.localizedFailureReason);
             }
-            completionHandler(transResponse?nil:err);
+            completionHandler(err);
         }];
     } else {
-        XTLog(@"翻译内容过多，减少后重试");
-        completionHandler(nil);
+        NSError *err = [[NSError alloc] initWithDomain:@"fun.waoh.translater"
+                                                  code:2
+                                              userInfo:@{NSLocalizedFailureReasonErrorKey:@"内容过多，减少后重试"}];
+        completionHandler(err);
     }
 }
 
@@ -62,15 +61,14 @@
                        content:(NSString *)content
                     selections:(NSArray<XCSourceTextRange *> *)selections
                    transResult:(YouDaoResponse *)transResponse {
-    NSInteger firstBlankLine = 0;
     NSInteger line = selections.firstObject.start.line;
-    NSMutableString *appendStr = [[NSMutableString alloc] initWithString:@"#XcodeTranslater: "];
+    NSMutableString *appendStr = [[NSMutableString alloc] initWithString:@"#XcodeTranslater:\n"];
     if (transResponse.sentenceTransResult) {
         [appendStr appendString:transResponse.sentenceTransResult.tran];
     } else if (transResponse.wordTransResult){
-        [appendStr appendString:[transResponse.wordTransResult toJSONString]];
+        [appendStr appendString:[YoudaoTranslater formatWord:transResponse.wordTransResult]];
     } else {
-        [appendStr appendString:[NSString stringWithFormat:@"暂无\"%@\"相关翻译",content]];
+        [appendStr appendString:[NSString stringWithFormat:@"/// 暂无\"%@\"相关翻译",content]];
     }
     if (![lines[line] hasPrefix:@" *"]) {
         [appendStr insertString:@"///" atIndex:0];

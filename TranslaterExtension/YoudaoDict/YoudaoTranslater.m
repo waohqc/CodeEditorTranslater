@@ -6,6 +6,7 @@
 //
 
 #import "YoudaoTranslater.h"
+#import "TranslaterDefine.h"
 #import <AFNetworking.h>
 #import <CommonCrypto/CommonDigest.h>
 
@@ -15,12 +16,21 @@ static NSString *_ = @"web";
 static NSString *youdaoTransUrl = @"https://dict.youdao.com/jsonapi_s?doctype=json&jsonversion=4";
 
 @implementation YoudaoSentenceTransModel
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    return YES;
+}
 @end
 
 @implementation YoudaoWordModel
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    return YES;
+}
 @end
 
 @implementation YoudaoWordTransModel
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    return YES;
+}
 @end
 
 @implementation YouDaoResponse
@@ -111,17 +121,28 @@ NSString *getMd5WithString(NSString * string)
                                  headers:headers
                                 progress:nil
                                  success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSError *parseErr = nil;
         if ([responseObject isKindOfClass:NSDictionary.class]) {
-            YouDaoResponse *response = [[YouDaoResponse alloc] initWithDictionary:responseObject error:nil];
-            if (completion) completion(response, nil);
+            YouDaoResponse *response = [[YouDaoResponse alloc] initWithDictionary:responseObject error:&parseErr];
+            if (completion) completion(response, parseErr?:nil);
         } else {
-            NSError *err = [[NSError alloc] initWithDomain:@"fun.waoh.translater"
+            parseErr = [[NSError alloc] initWithDomain:@"fun.waoh.translater"
                                                       code:1
                                                   userInfo:@{NSLocalizedFailureReasonErrorKey:@"解析错误"}];
-            if (completion) completion(nil, err);
+            if (completion) completion(nil, parseErr);
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (completion) completion(nil, error);
     }];
+}
+
++ (NSString *)formatWord:(YoudaoWordTransModel *)workTransModel {
+    NSMutableString *formatStr = [[NSMutableString alloc] init];
+    [workTransModel.trs enumerateObjectsUsingBlock:^(YoudaoWordModel * _Nonnull wordModel, NSUInteger idx, BOOL * _Nonnull stop) {
+        [formatStr appendString:[NSString stringWithFormat:@"/// %ld. %@ %@\n",idx+1,wordModel.pos,wordModel.tran]];
+        if(!idx) [formatStr insertString:@" " atIndex:3];
+    }];
+    [formatStr appendString:[NSString stringWithFormat:@"/// 美式发音: %@  英式发音:%@\n",workTransModel.usphone,workTransModel.ukphone]];
+    return [formatStr copy];
 }
 @end
