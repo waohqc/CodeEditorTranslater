@@ -62,7 +62,8 @@
                     selections:(NSArray<XCSourceTextRange *> *)selections
                    transResult:(YouDaoResponse *)transResponse {
     NSInteger line = selections.firstObject.start.line;
-    NSMutableString *appendStr = [[NSMutableString alloc] initWithString:@"#XcodeTranslater:\n"];
+    NSMutableString *appendStr = [[NSMutableString alloc] initWithString:@"#XcodeTranslater:"];
+    if(!transResponse.sentenceTransResult) [appendStr appendString:@"\n"];
     if (transResponse.sentenceTransResult) {
         [appendStr appendString:transResponse.sentenceTransResult.tran];
     } else if (transResponse.wordTransResult){

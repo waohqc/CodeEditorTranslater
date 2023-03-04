@@ -14,6 +14,7 @@
 		D64C228429ABC6AB00D21DDD /* TranslaterExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D64C227629ABC6AB00D21DDD /* TranslaterExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D64C228929ABC6FC00D21DDD /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D64C224A29ABC37E00D21DDD /* XcodeKit.framework */; };
 		D64C228A29ABC6FC00D21DDD /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D64C224A29ABC37E00D21DDD /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D686FF8E29B3A5FE00FF3011 /* NSFlippedView.m in Sources */ = {isa = PBXBuildFile; fileRef = D686FF8D29B3A5FE00FF3011 /* NSFlippedView.m */; };
 		D6F09FE929AD0EA400DC7981 /* YoudaoTranslater.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F09FE829AD0EA400DC7981 /* YoudaoTranslater.m */; };
 		D6FE0F0929AB65B9006098FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FE0F0829AB65B9006098FB /* AppDelegate.m */; };
 		D6FE0F0C29AB65B9006098FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FE0F0B29AB65B9006098FB /* ViewController.m */; };
@@ -75,6 +76,8 @@
 		D64C228029ABC6AB00D21DDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D64C228129ABC6AB00D21DDD /* TranslaterExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TranslaterExtension.entitlements; sourceTree = "<group>"; };
 		D64C228829ABC6EA00D21DDD /* TranslaterDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TranslaterDefine.h; sourceTree = "<group>"; };
+		D686FF8C29B3A5FE00FF3011 /* NSFlippedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSFlippedView.h; sourceTree = "<group>"; };
+		D686FF8D29B3A5FE00FF3011 /* NSFlippedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSFlippedView.m; sourceTree = "<group>"; };
 		D6A9045329ABC76D00E5D29F /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F09FE729AD0EA400DC7981 /* YoudaoTranslater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YoudaoTranslater.h; sourceTree = "<group>"; };
 		D6F09FE829AD0EA400DC7981 /* YoudaoTranslater.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YoudaoTranslater.m; sourceTree = "<group>"; };
@@ -189,6 +192,8 @@
 				D6FE0F0F29AB65B9006098FB /* Main.storyboard */,
 				D6FE0F1229AB65B9006098FB /* main.m */,
 				D6FE0F1429AB65B9006098FB /* Translater.entitlements */,
+				D686FF8C29B3A5FE00FF3011 /* NSFlippedView.h */,
+				D686FF8D29B3A5FE00FF3011 /* NSFlippedView.m */,
 			);
 			path = Translater;
 			sourceTree = "<group>";
@@ -354,6 +359,7 @@
 			files = (
 				D6FE0F0C29AB65B9006098FB /* ViewController.m in Sources */,
 				D6FE0F1329AB65B9006098FB /* main.m in Sources */,
+				D686FF8E29B3A5FE00FF3011 /* NSFlippedView.m in Sources */,
 				D6FE0F0929AB65B9006098FB /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,6 +391,7 @@
 			baseConfigurationReference = 4B7D3C3E0ED1556B54B13832 /* Pods-TranslaterExtension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TranslaterExtension/TranslaterExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -402,6 +409,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fun.wao.Translater.TranslaterExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
@@ -412,6 +420,7 @@
 			baseConfigurationReference = 66313F85F16AFD90E9A7EDBB /* Pods-TranslaterExtension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TranslaterExtension/TranslaterExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -429,6 +438,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = fun.wao.Translater.TranslaterExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
@@ -550,6 +560,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Translater/Translater.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -577,6 +588,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Translater/Translater.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;

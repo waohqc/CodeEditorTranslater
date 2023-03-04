@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21507"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -673,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider=""/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -683,11 +684,16 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="XcodeTranslater" separatorStyle="none" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
-                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="styleMask">
+                                <nil key="value"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -703,15 +709,170 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </view>
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
+                    <customView key="view" translatesAutoresizingMaskIntoConstraints="NO" id="JzM-kF-mAS">
+                        <rect key="frame" x="0.0" y="0.0" width="800" height="516"/>
+                        <subviews>
+                            <scrollView horizontalHuggingPriority="1000" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyo-yd-mW4" userLabel="scrollView">
+                                <rect key="frame" x="0.0" y="0.0" width="800" height="516"/>
+                                <clipView key="contentView" horizontalHuggingPriority="1000" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VGq-2R-h0b" userLabel="contentView">
+                                    <rect key="frame" x="1" y="1" width="798" height="514"/>
+                                    <subviews>
+                                        <view horizontalHuggingPriority="1000" verticalHuggingPriority="249" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="lUt-54-Mmq" userLabel="innerView" customClass="NSFlippedView">
+                                            <rect key="frame" x="-634" y="-1056" width="1432" height="1570"/>
+                                            <subviews>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kdh-bh-gr1">
+                                                    <rect key="frame" x="14" y="1538" width="1404" height="16"/>
+                                                    <textFieldCell key="cell" title="1.系统设置中搜索“扩展”，选择“扩展，Extensions”，点击XcodeSourceEditor，选择XcodeTranslater" id="YnQ-hP-yDI">
+                                                        <font key="font" usesAppearanceFont="YES"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6Zv-Fw-Yj5">
+                                                    <rect key="frame" x="14" y="990" width="1404" height="16"/>
+                                                    <textFieldCell key="cell" title="2.打开Xcode，在代码编辑区选中英文句子/单词，顶部工具栏选择Editor-&gt;TranslaterExtension-&gt;EngToCN" id="0hn-Xn-rSl">
+                                                        <font key="font" usesAppearanceFont="YES"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pd0-aI-PJ4">
+                                                    <rect key="frame" x="14" y="650" width="1420" height="16"/>
+                                                    <textFieldCell key="cell" title="3.翻译将会在选中的句子/单词上方以注释形式添加" id="o7J-KQ-Kyl">
+                                                        <font key="font" usesAppearanceFont="YES"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vs3-lN-wle">
+                                                    <rect key="frame" x="14" y="352" width="1404" height="16"/>
+                                                    <textFieldCell key="cell" id="3tJ-1V-iDf">
+                                                        <font key="font" usesAppearanceFont="YES"/>
+                                                        <string key="title">3.为XcodeTranslater-&gt;EngToCN配置快捷键：打开Xcode，顶部工具栏选择Xcode-&gt;Settings，将输入法切换到ABC(否则可能无法输入快捷键)，选择Key Bindings，搜索EngToCN，双击后输入新的快捷键，我这里配置的是Command+T。</string>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GWY-8B-5fz" userLabel="image1">
+                                                    <rect key="frame" x="29" y="1227" width="1390" height="306"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="300" id="FAP-if-aav"/>
+                                                    </constraints>
+                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="setting_extension" id="EaA-Fs-c21"/>
+                                                </imageView>
+                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7sj-Fu-EfC" userLabel="image2">
+                                                    <rect key="frame" x="29" y="1019" width="1390" height="206"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="2Rk-TI-XjU"/>
+                                                    </constraints>
+                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="setting_extension_more" id="lhP-rm-F3a"/>
+                                                </imageView>
+                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rsh-RX-STk" userLabel="image3">
+                                                    <rect key="frame" x="29" y="679" width="1390" height="306"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="300" id="gxd-NF-7Pa"/>
+                                                    </constraints>
+                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="setting_extension_editor" id="Deo-24-gpX"/>
+                                                </imageView>
+                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pVN-15-yen" userLabel="image4">
+                                                    <rect key="frame" x="29" y="539" width="1390" height="106"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="jy8-1M-ABQ"/>
+                                                    </constraints>
+                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="setting_extension_trans" id="5ZU-NM-lx2"/>
+                                                </imageView>
+                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="slP-XH-xlp" userLabel="image5">
+                                                    <rect key="frame" x="29" y="381" width="1390" height="156"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="150" id="Kgp-8N-WVy"/>
+                                                    </constraints>
+                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="setting_extension_trans_word" id="VfU-h1-CGS"/>
+                                                </imageView>
+                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t8w-kR-XAG" userLabel="image6">
+                                                    <rect key="frame" x="29" y="41" width="1390" height="306"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="300" id="mha-yK-KY7"/>
+                                                    </constraints>
+                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" image="setting_extension_shortcut" id="Nvi-Bb-uxH"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="t8w-kR-XAG" secondAttribute="bottom" constant="44" id="2Kb-kN-S5S"/>
+                                                <constraint firstItem="Rsh-RX-STk" firstAttribute="top" secondItem="6Zv-Fw-Yj5" secondAttribute="bottom" constant="8" id="2MH-mE-k2B"/>
+                                                <constraint firstAttribute="trailing" secondItem="6Zv-Fw-Yj5" secondAttribute="trailing" constant="16" id="2n5-Nh-KsT"/>
+                                                <constraint firstItem="7sj-Fu-EfC" firstAttribute="leading" secondItem="lUt-54-Mmq" secondAttribute="leading" constant="32" id="598-F8-FC5"/>
+                                                <constraint firstItem="slP-XH-xlp" firstAttribute="leading" secondItem="lUt-54-Mmq" secondAttribute="leading" constant="32" id="DgW-Pl-hpl"/>
+                                                <constraint firstItem="Pd0-aI-PJ4" firstAttribute="leading" secondItem="lUt-54-Mmq" secondAttribute="leading" constant="16" id="Fai-pr-NzC"/>
+                                                <constraint firstItem="pVN-15-yen" firstAttribute="top" secondItem="Pd0-aI-PJ4" secondAttribute="bottom" constant="8" id="L8N-av-vk8"/>
+                                                <constraint firstAttribute="trailing" secondItem="Rsh-RX-STk" secondAttribute="trailing" constant="16" id="LPu-xL-AyX"/>
+                                                <constraint firstItem="kdh-bh-gr1" firstAttribute="top" secondItem="lUt-54-Mmq" secondAttribute="top" constant="16" id="W41-Pj-Ogw"/>
+                                                <constraint firstItem="t8w-kR-XAG" firstAttribute="top" secondItem="Vs3-lN-wle" secondAttribute="bottom" constant="8" id="W6Z-lB-rwu"/>
+                                                <constraint firstAttribute="trailing" secondItem="Pd0-aI-PJ4" secondAttribute="trailing" id="WIo-Z8-oVA"/>
+                                                <constraint firstAttribute="trailing" secondItem="GWY-8B-5fz" secondAttribute="trailing" constant="16" id="WgI-GD-afZ"/>
+                                                <constraint firstItem="t8w-kR-XAG" firstAttribute="leading" secondItem="lUt-54-Mmq" secondAttribute="leading" constant="32" id="ZoK-Pd-dlp"/>
+                                                <constraint firstItem="pVN-15-yen" firstAttribute="leading" secondItem="lUt-54-Mmq" secondAttribute="leading" constant="32" id="Zyw-cv-0rM"/>
+                                                <constraint firstItem="GWY-8B-5fz" firstAttribute="leading" secondItem="lUt-54-Mmq" secondAttribute="leading" constant="32" id="a7S-L0-7wh"/>
+                                                <constraint firstItem="6Zv-Fw-Yj5" firstAttribute="top" secondItem="7sj-Fu-EfC" secondAttribute="bottom" constant="16" id="aLP-Pv-mTw"/>
+                                                <constraint firstItem="GWY-8B-5fz" firstAttribute="top" secondItem="kdh-bh-gr1" secondAttribute="bottom" constant="8" id="aRy-1m-vPN"/>
+                                                <constraint firstItem="Vs3-lN-wle" firstAttribute="top" secondItem="slP-XH-xlp" secondAttribute="bottom" constant="16" id="apk-xa-KwS"/>
+                                                <constraint firstAttribute="trailing" secondItem="t8w-kR-XAG" secondAttribute="trailing" constant="16" id="bYd-eR-Tbc"/>
+                                                <constraint firstAttribute="trailing" secondItem="slP-XH-xlp" secondAttribute="trailing" constant="16" id="d5s-VP-9G0"/>
+                                                <constraint firstAttribute="trailing" secondItem="7sj-Fu-EfC" secondAttribute="trailing" constant="16" id="eAR-Pu-lZd"/>
+                                                <constraint firstItem="Rsh-RX-STk" firstAttribute="leading" secondItem="lUt-54-Mmq" secondAttribute="leading" constant="32" id="f1L-KZ-VOn"/>
+                                                <constraint firstItem="kdh-bh-gr1" firstAttribute="leading" secondItem="lUt-54-Mmq" secondAttribute="leading" constant="16" id="hLK-c4-Hs6"/>
+                                                <constraint firstItem="6Zv-Fw-Yj5" firstAttribute="leading" secondItem="lUt-54-Mmq" secondAttribute="leading" constant="16" id="kKr-4h-0Bn"/>
+                                                <constraint firstAttribute="trailing" secondItem="kdh-bh-gr1" secondAttribute="trailing" constant="16" id="nML-v2-Wi9"/>
+                                                <constraint firstItem="7sj-Fu-EfC" firstAttribute="top" secondItem="GWY-8B-5fz" secondAttribute="bottom" constant="8" id="nXQ-21-2dO"/>
+                                                <constraint firstItem="Pd0-aI-PJ4" firstAttribute="top" secondItem="Rsh-RX-STk" secondAttribute="bottom" constant="16" id="pok-XP-pzI"/>
+                                                <constraint firstItem="slP-XH-xlp" firstAttribute="top" secondItem="pVN-15-yen" secondAttribute="bottom" constant="8" id="rWm-ap-J8X"/>
+                                                <constraint firstItem="Vs3-lN-wle" firstAttribute="leading" secondItem="lUt-54-Mmq" secondAttribute="leading" constant="16" id="x6H-ca-DWf"/>
+                                                <constraint firstAttribute="trailing" secondItem="pVN-15-yen" secondAttribute="trailing" constant="16" id="xFz-NY-zwn"/>
+                                                <constraint firstAttribute="trailing" secondItem="Vs3-lN-wle" secondAttribute="trailing" constant="16" id="yIx-Xf-WZd"/>
+                                            </constraints>
+                                            <shadow key="shadow">
+                                                <color key="color" name="selectedControlColor" catalog="System" colorSpace="catalog"/>
+                                            </shadow>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="lUt-54-Mmq" secondAttribute="bottom" constant="-1056" id="Kfz-YJ-B32"/>
+                                        <constraint firstItem="lUt-54-Mmq" firstAttribute="leading" secondItem="VGq-2R-h0b" secondAttribute="leading" constant="-634" id="doW-Gx-8og"/>
+                                        <constraint firstItem="lUt-54-Mmq" firstAttribute="top" secondItem="VGq-2R-h0b" secondAttribute="top" id="kFN-U4-Isr"/>
+                                        <constraint firstItem="lUt-54-Mmq" firstAttribute="width" secondItem="VGq-2R-h0b" secondAttribute="width" id="tEi-Y3-w7L"/>
+                                    </constraints>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.97476340694006314" horizontal="YES" id="Uci-VJ-vfo">
+                                    <rect key="frame" x="-100" y="-100" width="798" height="16"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.35416666666666663" horizontal="NO" id="e4z-AO-QBR">
+                                    <rect key="frame" x="783" y="1" width="16" height="514"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="gyo-yd-mW4" secondAttribute="trailing" id="1SW-5E-23M"/>
+                            <constraint firstItem="gyo-yd-mW4" firstAttribute="top" secondItem="JzM-kF-mAS" secondAttribute="top" id="DYF-XL-Tru"/>
+                            <constraint firstAttribute="bottom" secondItem="gyo-yd-mW4" secondAttribute="bottom" id="IfK-Ud-D46"/>
+                            <constraint firstItem="gyo-yd-mW4" firstAttribute="leading" secondItem="JzM-kF-mAS" secondAttribute="leading" id="U9k-9w-ZxG"/>
+                            <constraint firstAttribute="width" constant="800" id="epZ-gz-ybb"/>
+                            <constraint firstItem="gyo-yd-mW4" firstAttribute="width" secondItem="JzM-kF-mAS" secondAttribute="width" id="ggS-VX-LFh"/>
+                        </constraints>
+                    </customView>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="721"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="setting_extension" width="1430" height="1250"/>
+        <image name="setting_extension_editor" width="2014" height="1750"/>
+        <image name="setting_extension_more" width="940" height="530"/>
+        <image name="setting_extension_shortcut" width="1666" height="1182"/>
+        <image name="setting_extension_trans" width="1758" height="500"/>
+        <image name="setting_extension_trans_word" width="1700" height="506"/>
+    </resources>
 </document>
