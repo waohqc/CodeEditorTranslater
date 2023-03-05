@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D6FE0F0329AB65B9006098FB"
-               BuildableName = "Translater.app"
-               BlueprintName = "Translater"
-               ReferencedContainer = "container:Translater.xcodeproj">
+               BuildableName = "XcodeEditorTranslater.app"
+               BlueprintName = "XcodeEditorTranslater"
+               ReferencedContainer = "container:XcodeEditorTranslater.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D6FE0F0329AB65B9006098FB"
-            BuildableName = "Translater.app"
-            BlueprintName = "Translater"
-            ReferencedContainer = "container:Translater.xcodeproj">
+            BuildableName = "XcodeEditorTranslater.app"
+            BlueprintName = "XcodeEditorTranslater"
+            ReferencedContainer = "container:XcodeEditorTranslater.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D6FE0F0329AB65B9006098FB"
-            BuildableName = "Translater.app"
-            BlueprintName = "Translater"
-            ReferencedContainer = "container:Translater.xcodeproj">
+            BuildableName = "XcodeEditorTranslater.app"
+            BlueprintName = "XcodeEditorTranslater"
+            ReferencedContainer = "container:XcodeEditorTranslater.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
@@ -72,7 +72,8 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
+      customArchiveName = "XcodeEditorTranslater"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

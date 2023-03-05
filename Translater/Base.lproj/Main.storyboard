@@ -11,11 +11,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="Translater" id="1Xt-HY-uBw">
+                            <menuItem title="XcodeEditorTranslater" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Translater" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="XcodeEditorTranslater" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About Translater" id="5kV-Vb-QxS">
+                                        <menuItem title="About XcodeEditorTranslater" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -29,7 +29,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide Translater" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide XcodeEditorTranslater" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -47,7 +47,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit Translater" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit XcodeEditorTranslater" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -660,7 +660,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="Translater Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="XcodeEditorTranslater Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -684,7 +684,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="XcodeTranslater" separatorStyle="none" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="XcodeEditorTranslater" separatorStyle="none" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
@@ -723,7 +723,7 @@
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kdh-bh-gr1">
                                                     <rect key="frame" x="14" y="1538" width="1404" height="16"/>
-                                                    <textFieldCell key="cell" title="1.系统设置中搜索“扩展”，选择“扩展，Extensions”，点击XcodeSourceEditor，选择XcodeTranslater" id="YnQ-hP-yDI">
+                                                    <textFieldCell key="cell" title="1.系统设置中搜索“扩展”，选择“扩展，Extensions”，点击XcodeSourceEditor，选择TranslaterExtension" id="YnQ-hP-yDI">
                                                         <font key="font" usesAppearanceFont="YES"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -846,7 +846,7 @@
                                     <rect key="frame" x="-100" y="-100" width="798" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.35416666666666663" horizontal="NO" id="e4z-AO-QBR">
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.95833333333333337" horizontal="NO" id="e4z-AO-QBR">
                                     <rect key="frame" x="783" y="1" width="16" height="514"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>

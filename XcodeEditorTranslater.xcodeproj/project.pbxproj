@@ -11,7 +11,7 @@
 		D64C227729ABC6AB00D21DDD /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D64C224829ABC37E00D21DDD /* Cocoa.framework */; };
 		D64C227C29ABC6AB00D21DDD /* SourceEditorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C227B29ABC6AB00D21DDD /* SourceEditorExtension.m */; };
 		D64C227F29ABC6AB00D21DDD /* SourceEditorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = D64C227E29ABC6AB00D21DDD /* SourceEditorCommand.m */; };
-		D64C228429ABC6AB00D21DDD /* TranslaterExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D64C227629ABC6AB00D21DDD /* TranslaterExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D64C228429ABC6AB00D21DDD /* XcodeEditorTranslaterExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D64C227629ABC6AB00D21DDD /* XcodeEditorTranslaterExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D64C228929ABC6FC00D21DDD /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D64C224A29ABC37E00D21DDD /* XcodeKit.framework */; };
 		D64C228A29ABC6FC00D21DDD /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D64C224A29ABC37E00D21DDD /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D686FF8E29B3A5FE00FF3011 /* NSFlippedView.m in Sources */ = {isa = PBXBuildFile; fileRef = D686FF8D29B3A5FE00FF3011 /* NSFlippedView.m */; };
@@ -41,7 +41,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				D64C228429ABC6AB00D21DDD /* TranslaterExtension.appex in Embed Foundation Extensions */,
+				D64C228429ABC6AB00D21DDD /* XcodeEditorTranslaterExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,7 +68,7 @@
 		768F3B6315BA382200EF3D5B /* Pods-Translater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Translater.release.xcconfig"; path = "Target Support Files/Pods-Translater/Pods-Translater.release.xcconfig"; sourceTree = "<group>"; };
 		D64C224829ABC37E00D21DDD /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D64C224A29ABC37E00D21DDD /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
-		D64C227629ABC6AB00D21DDD /* TranslaterExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TranslaterExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		D64C227629ABC6AB00D21DDD /* XcodeEditorTranslaterExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = XcodeEditorTranslaterExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D64C227A29ABC6AB00D21DDD /* SourceEditorExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorExtension.h; sourceTree = "<group>"; };
 		D64C227B29ABC6AB00D21DDD /* SourceEditorExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorExtension.m; sourceTree = "<group>"; };
 		D64C227D29ABC6AB00D21DDD /* SourceEditorCommand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorCommand.h; sourceTree = "<group>"; };
@@ -79,9 +79,10 @@
 		D686FF8C29B3A5FE00FF3011 /* NSFlippedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSFlippedView.h; sourceTree = "<group>"; };
 		D686FF8D29B3A5FE00FF3011 /* NSFlippedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSFlippedView.m; sourceTree = "<group>"; };
 		D6A9045329ABC76D00E5D29F /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6BAD93529B45A040057B6C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		D6F09FE729AD0EA400DC7981 /* YoudaoTranslater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YoudaoTranslater.h; sourceTree = "<group>"; };
 		D6F09FE829AD0EA400DC7981 /* YoudaoTranslater.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YoudaoTranslater.m; sourceTree = "<group>"; };
-		D6FE0F0429AB65B9006098FB /* Translater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Translater.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6FE0F0429AB65B9006098FB /* XcodeEditorTranslater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XcodeEditorTranslater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6FE0F0729AB65B9006098FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D6FE0F0829AB65B9006098FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D6FE0F0A29AB65B9006098FB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -175,8 +176,8 @@
 		D6FE0F0529AB65B9006098FB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D6FE0F0429AB65B9006098FB /* Translater.app */,
-				D64C227629ABC6AB00D21DDD /* TranslaterExtension.appex */,
+				D6FE0F0429AB65B9006098FB /* XcodeEditorTranslater.app */,
+				D64C227629ABC6AB00D21DDD /* XcodeEditorTranslaterExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,6 +185,7 @@
 		D6FE0F0629AB65B9006098FB /* Translater */ = {
 			isa = PBXGroup;
 			children = (
+				D6BAD93529B45A040057B6C8 /* Info.plist */,
 				D6FE0F0729AB65B9006098FB /* AppDelegate.h */,
 				D6FE0F0829AB65B9006098FB /* AppDelegate.m */,
 				D6FE0F0A29AB65B9006098FB /* ViewController.h */,
@@ -201,9 +203,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D64C227529ABC6AB00D21DDD /* TranslaterExtension */ = {
+		D64C227529ABC6AB00D21DDD /* XcodeEditorTranslaterExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D64C228529ABC6AB00D21DDD /* Build configuration list for PBXNativeTarget "TranslaterExtension" */;
+			buildConfigurationList = D64C228529ABC6AB00D21DDD /* Build configuration list for PBXNativeTarget "XcodeEditorTranslaterExtension" */;
 			buildPhases = (
 				5897905EF6B987E998B08CA0 /* [CP] Check Pods Manifest.lock */,
 				D64C227229ABC6AB00D21DDD /* Sources */,
@@ -215,14 +217,14 @@
 			);
 			dependencies = (
 			);
-			name = TranslaterExtension;
+			name = XcodeEditorTranslaterExtension;
 			productName = TranslaterExtension;
-			productReference = D64C227629ABC6AB00D21DDD /* TranslaterExtension.appex */;
+			productReference = D64C227629ABC6AB00D21DDD /* XcodeEditorTranslaterExtension.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
-		D6FE0F0329AB65B9006098FB /* Translater */ = {
+		D6FE0F0329AB65B9006098FB /* XcodeEditorTranslater */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D6FE0F1729AB65B9006098FB /* Build configuration list for PBXNativeTarget "Translater" */;
+			buildConfigurationList = D6FE0F1729AB65B9006098FB /* Build configuration list for PBXNativeTarget "XcodeEditorTranslater" */;
 			buildPhases = (
 				E82FC85CF18F2CBACA77346C /* [CP] Check Pods Manifest.lock */,
 				D6FE0F0029AB65B9006098FB /* Sources */,
@@ -235,9 +237,9 @@
 			dependencies = (
 				D64C228329ABC6AB00D21DDD /* PBXTargetDependency */,
 			);
-			name = Translater;
+			name = XcodeEditorTranslater;
 			productName = Translater;
-			productReference = D6FE0F0429AB65B9006098FB /* Translater.app */;
+			productReference = D6FE0F0429AB65B9006098FB /* XcodeEditorTranslater.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -257,7 +259,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D6FE0EFF29AB65B9006098FB /* Build configuration list for PBXProject "Translater" */;
+			buildConfigurationList = D6FE0EFF29AB65B9006098FB /* Build configuration list for PBXProject "XcodeEditorTranslater" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -270,8 +272,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D6FE0F0329AB65B9006098FB /* Translater */,
-				D64C227529ABC6AB00D21DDD /* TranslaterExtension */,
+				D6FE0F0329AB65B9006098FB /* XcodeEditorTranslater */,
+				D64C227529ABC6AB00D21DDD /* XcodeEditorTranslaterExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -369,7 +371,7 @@
 /* Begin PBXTargetDependency section */
 		D64C228329ABC6AB00D21DDD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D64C227529ABC6AB00D21DDD /* TranslaterExtension */;
+			target = D64C227529ABC6AB00D21DDD /* XcodeEditorTranslaterExtension */;
 			targetProxy = D64C228229ABC6AB00D21DDD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -399,14 +401,14 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TranslaterExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = TranslaterExtension;
+				INFOPLIST_KEY_CFBundleDisplayName = XcodeEditorTranslater;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = fun.wao.Translater.TranslaterExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -428,14 +430,14 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TranslaterExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = TranslaterExtension;
+				INFOPLIST_KEY_CFBundleDisplayName = XcodeEditorTranslater;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = fun.wao.Translater.TranslaterExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -494,7 +496,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -506,6 +508,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -546,7 +549,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -567,6 +570,7 @@
 				DEVELOPMENT_TEAM = W6KQR9C6WG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Translater/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -574,7 +578,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = fun.wao.Translater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -595,6 +600,7 @@
 				DEVELOPMENT_TEAM = W6KQR9C6WG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Translater/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -602,7 +608,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = fun.wao.Translater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -612,7 +619,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D64C228529ABC6AB00D21DDD /* Build configuration list for PBXNativeTarget "TranslaterExtension" */ = {
+		D64C228529ABC6AB00D21DDD /* Build configuration list for PBXNativeTarget "XcodeEditorTranslaterExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D64C228629ABC6AB00D21DDD /* Debug */,
@@ -621,7 +628,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D6FE0EFF29AB65B9006098FB /* Build configuration list for PBXProject "Translater" */ = {
+		D6FE0EFF29AB65B9006098FB /* Build configuration list for PBXProject "XcodeEditorTranslater" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6FE0F1529AB65B9006098FB /* Debug */,
@@ -630,7 +637,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D6FE0F1729AB65B9006098FB /* Build configuration list for PBXNativeTarget "Translater" */ = {
+		D6FE0F1729AB65B9006098FB /* Build configuration list for PBXNativeTarget "XcodeEditorTranslater" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D6FE0F1829AB65B9006098FB /* Debug */,

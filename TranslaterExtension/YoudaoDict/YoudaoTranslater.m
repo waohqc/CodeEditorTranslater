@@ -97,14 +97,21 @@ NSString *getMd5WithString(NSString * string)
     };
 }
 
++ (NSString *)getCookie {
+    double randomVal = arc4random();
+    while(randomVal > 1) randomVal /= 10;
+    return [NSString stringWithFormat:@"OUTFOX_SEARCH_USER_ID_NCOO=%.7lf",randomVal * INT32_MAX];
+}
+
 + (void)youdaoTranslateWithContent:(NSString *)content
                         completion:(void (^)(YouDaoResponse * _Nullable, NSError * _Nullable))completion {
+    
     NSDictionary *headers = @{
       @"Accept": @"application/json, text/plain, */*",
       @"Accept-Language": @"zh-CN,zh;q=0.9",
       @"Connection": @"keep-alive",
       @"Content-Type": @"application/x-www-form-urlencoded",
-      @"Cookie": @"OUTFOX_SEARCH_USER_ID_NCOO=636820395.5560622; OUTFOX_SEARCH_USER_ID=-347984630@115.171.244.182",
+      @"Cookie": [self getCookie],
       @"Origin": @"https://youdao.com",
       @"Referer": @"https://youdao.com/",
       @"Sec-Fetch-Dest": @"empty",
