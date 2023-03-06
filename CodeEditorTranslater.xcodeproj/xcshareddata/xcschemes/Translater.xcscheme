@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D6FE0F0329AB65B9006098FB"
-               BuildableName = "XcodeEditorTranslater.app"
-               BlueprintName = "XcodeEditorTranslater"
-               ReferencedContainer = "container:XcodeEditorTranslater.xcodeproj">
+               BuildableName = "CodeEditorTranslater.app"
+               BlueprintName = "CodeEditorTranslater"
+               ReferencedContainer = "container:CodeEditorTranslater.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D6FE0F0329AB65B9006098FB"
-            BuildableName = "XcodeEditorTranslater.app"
-            BlueprintName = "XcodeEditorTranslater"
-            ReferencedContainer = "container:XcodeEditorTranslater.xcodeproj">
+            BuildableName = "CodeEditorTranslater.app"
+            BlueprintName = "CodeEditorTranslater"
+            ReferencedContainer = "container:CodeEditorTranslater.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D6FE0F0329AB65B9006098FB"
-            BuildableName = "XcodeEditorTranslater.app"
-            BlueprintName = "XcodeEditorTranslater"
-            ReferencedContainer = "container:XcodeEditorTranslater.xcodeproj">
+            BuildableName = "CodeEditorTranslater.app"
+            BlueprintName = "CodeEditorTranslater"
+            ReferencedContainer = "container:CodeEditorTranslater.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
