@@ -847,7 +847,7 @@
                                     <rect key="frame" x="-100" y="-100" width="798" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.66666666666666674" horizontal="NO" id="e4z-AO-QBR">
+                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.99810606060606055" horizontal="NO" id="e4z-AO-QBR">
                                     <rect key="frame" x="783" y="1" width="16" height="514"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
@@ -869,10 +869,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="setting_extension" width="1430" height="1250"/>
-        <image name="setting_extension_editor" width="2014" height="1750"/>
-        <image name="setting_extension_more" width="940" height="530"/>
-        <image name="setting_extension_shortcut" width="1666" height="1182"/>
+        <image name="setting_extension" width="1452" height="1254"/>
+        <image name="setting_extension_editor" width="1948" height="1734"/>
+        <image name="setting_extension_more" width="1426" height="1248"/>
+        <image name="setting_extension_shortcut" width="1660" height="1118"/>
         <image name="setting_extension_trans" width="1758" height="500"/>
         <image name="setting_extension_trans_word" width="1700" height="506"/>
     </resources>
