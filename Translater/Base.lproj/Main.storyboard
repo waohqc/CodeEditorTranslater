@@ -750,7 +750,7 @@
                                                     <rect key="frame" x="14" y="352" width="1434" height="16"/>
                                                     <textFieldCell key="cell" id="3tJ-1V-iDf">
                                                         <font key="font" usesAppearanceFont="YES"/>
-                                                        <string key="title">3.为CodeEditorTranslater-&gt;EngToCN配置快捷键：打开Xcode，顶部工具栏选择Xcode-&gt;Settings，将输入法切换到ABC(否则可能无法输入快捷键)，选择Key Bindings，搜索EngToCN，双击后输入新的快捷键，我这里配置的是Command+T。</string>
+                                                        <string key="title">4.为CodeEditorTranslater-&gt;EngToCN配置快捷键：打开Xcode，顶部工具栏选择Xcode-&gt;Settings，将输入法切换到ABC(否则可能无法输入快捷键)，选择Key Bindings，搜索EngToCN，双击后输入新的快捷键，我这里配置的是Command+T。</string>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
