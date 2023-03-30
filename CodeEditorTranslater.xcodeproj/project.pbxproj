@@ -14,13 +14,10 @@
 		D64C228429ABC6AB00D21DDD /* CodeEditorTranslater.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = D64C227629ABC6AB00D21DDD /* CodeEditorTranslater.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D64C228929ABC6FC00D21DDD /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D64C224A29ABC37E00D21DDD /* XcodeKit.framework */; };
 		D64C228A29ABC6FC00D21DDD /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D64C224A29ABC37E00D21DDD /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D686FF8E29B3A5FE00FF3011 /* NSFlippedView.m in Sources */ = {isa = PBXBuildFile; fileRef = D686FF8D29B3A5FE00FF3011 /* NSFlippedView.m */; };
+		D670ACF529D4A03200D8F5A2 /* CETApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D670ACF429D4A03200D8F5A2 /* CETApp.swift */; };
+		D6DB6A8929D0A384001B2DEE /* CETAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6DB6A8829D0A384001B2DEE /* CETAppView.swift */; };
 		D6F09FE929AD0EA400DC7981 /* YoudaoTranslater.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F09FE829AD0EA400DC7981 /* YoudaoTranslater.m */; };
-		D6FE0F0929AB65B9006098FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FE0F0829AB65B9006098FB /* AppDelegate.m */; };
-		D6FE0F0C29AB65B9006098FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FE0F0B29AB65B9006098FB /* ViewController.m */; };
 		D6FE0F0E29AB65B9006098FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6FE0F0D29AB65B9006098FB /* Assets.xcassets */; };
-		D6FE0F1129AB65B9006098FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6FE0F0F29AB65B9006098FB /* Main.storyboard */; };
-		D6FE0F1329AB65B9006098FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D6FE0F1229AB65B9006098FB /* main.m */; };
 		FC31638910C7D981FFC13901 /* Pods_Translater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F2C7A51058D0CE72C2A7AA /* Pods_Translater.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,20 +73,15 @@
 		D64C228029ABC6AB00D21DDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D64C228129ABC6AB00D21DDD /* TranslaterExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TranslaterExtension.entitlements; sourceTree = "<group>"; };
 		D64C228829ABC6EA00D21DDD /* TranslaterDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TranslaterDefine.h; sourceTree = "<group>"; };
-		D686FF8C29B3A5FE00FF3011 /* NSFlippedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSFlippedView.h; sourceTree = "<group>"; };
-		D686FF8D29B3A5FE00FF3011 /* NSFlippedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSFlippedView.m; sourceTree = "<group>"; };
+		D670ACF429D4A03200D8F5A2 /* CETApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CETApp.swift; sourceTree = "<group>"; };
 		D6A9045329ABC76D00E5D29F /* AFNetworking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AFNetworking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6BAD93529B45A040057B6C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		D6DB6A8329D0A343001B2DEE /* CodeEditorTranslater-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CodeEditorTranslater-Bridging-Header.h"; sourceTree = "<group>"; };
+		D6DB6A8829D0A384001B2DEE /* CETAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CETAppView.swift; sourceTree = "<group>"; };
 		D6F09FE729AD0EA400DC7981 /* YoudaoTranslater.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YoudaoTranslater.h; sourceTree = "<group>"; };
 		D6F09FE829AD0EA400DC7981 /* YoudaoTranslater.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YoudaoTranslater.m; sourceTree = "<group>"; };
 		D6FE0F0429AB65B9006098FB /* CodeEditorTranslater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeEditorTranslater.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6FE0F0729AB65B9006098FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		D6FE0F0829AB65B9006098FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D6FE0F0A29AB65B9006098FB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D6FE0F0B29AB65B9006098FB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D6FE0F0D29AB65B9006098FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D6FE0F1029AB65B9006098FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D6FE0F1229AB65B9006098FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D6FE0F1429AB65B9006098FB /* Translater.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Translater.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +162,7 @@
 				D64C224729ABC37E00D21DDD /* Frameworks */,
 				D6FE0F0529AB65B9006098FB /* Products */,
 				90F478527603A54E8333BED9 /* Pods */,
+				D6DB6A8329D0A343001B2DEE /* CodeEditorTranslater-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,17 +178,11 @@
 		D6FE0F0629AB65B9006098FB /* Translater */ = {
 			isa = PBXGroup;
 			children = (
+				D670ACF429D4A03200D8F5A2 /* CETApp.swift */,
+				D6DB6A8829D0A384001B2DEE /* CETAppView.swift */,
 				D6BAD93529B45A040057B6C8 /* Info.plist */,
-				D6FE0F0729AB65B9006098FB /* AppDelegate.h */,
-				D6FE0F0829AB65B9006098FB /* AppDelegate.m */,
-				D6FE0F0A29AB65B9006098FB /* ViewController.h */,
-				D6FE0F0B29AB65B9006098FB /* ViewController.m */,
 				D6FE0F0D29AB65B9006098FB /* Assets.xcassets */,
-				D6FE0F0F29AB65B9006098FB /* Main.storyboard */,
-				D6FE0F1229AB65B9006098FB /* main.m */,
 				D6FE0F1429AB65B9006098FB /* Translater.entitlements */,
-				D686FF8C29B3A5FE00FF3011 /* NSFlippedView.h */,
-				D686FF8D29B3A5FE00FF3011 /* NSFlippedView.m */,
 			);
 			path = Translater;
 			sourceTree = "<group>";
@@ -256,6 +243,7 @@
 					};
 					D6FE0F0329AB65B9006098FB = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -291,7 +279,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6FE0F0E29AB65B9006098FB /* Assets.xcassets in Resources */,
-				D6FE0F1129AB65B9006098FB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,10 +346,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6FE0F0C29AB65B9006098FB /* ViewController.m in Sources */,
-				D6FE0F1329AB65B9006098FB /* main.m in Sources */,
-				D686FF8E29B3A5FE00FF3011 /* NSFlippedView.m in Sources */,
-				D6FE0F0929AB65B9006098FB /* AppDelegate.m in Sources */,
+				D6DB6A8929D0A384001B2DEE /* CETAppView.swift in Sources */,
+				D670ACF529D4A03200D8F5A2 /* CETApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,17 +360,6 @@
 			targetProxy = D64C228229ABC6AB00D21DDD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		D6FE0F0F29AB65B9006098FB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D6FE0F1029AB65B9006098FB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D64C228629ABC6AB00D21DDD /* Debug */ = {
@@ -408,6 +382,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = fun.wao.Translater.TranslaterExtension;
 				PRODUCT_NAME = CodeEditorTranslater;
@@ -437,6 +412,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = fun.wao.Translater.TranslaterExtension;
 				PRODUCT_NAME = CodeEditorTranslater;
@@ -496,7 +472,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -549,7 +525,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -562,6 +538,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Translater/Translater.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -574,17 +551,19 @@
 				INFOPLIST_KEY_CFBundleDisplayName = CodeEditorTranslater;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = fun.wao.Translater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CodeEditorTranslater-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -594,6 +573,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Translater/Translater.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -606,17 +586,18 @@
 				INFOPLIST_KEY_CFBundleDisplayName = CodeEditorTranslater;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.developer-tools";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = fun.wao.Translater;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CodeEditorTranslater-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
